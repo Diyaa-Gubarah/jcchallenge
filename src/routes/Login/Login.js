@@ -81,10 +81,7 @@ const ContainerWithBoarder = styled(Container)`
   justify-content: center;
 `;
 
-
-
 const Login = () => {
-  const navigate = useNavigate()
   const dispatch = useAppDispatch();
   const isLoading = useAppShallowSelector(({ auth }) => auth.isLoading);
   const message = useAppShallowSelector(({ auth }) => auth.message);
@@ -97,8 +94,6 @@ const Login = () => {
 
     //dispatch login action
     dispatch(loginAUser({ email: email.value, password: password.value }));
-
-    navigate('/')
   };
 
   return (

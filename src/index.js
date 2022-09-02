@@ -16,7 +16,7 @@ root.render(
       <Provider store={store}>
         <Layout>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/jcchallenge" element={<Home />} />
             {/* <Route path="/about" element={<About />} /> */}
 
             <Route
