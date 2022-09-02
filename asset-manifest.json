@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/jcchallenge/static/css/main.40c88f47.css",
-    "main.js": "/jcchallenge/static/js/main.c604b619.js",
+    "main.js": "/jcchallenge/static/js/main.4fda8c5a.js",
     "static/media/img_13.png": "/jcchallenge/static/media/img_13.8c691a63720d3ec4d317.png",
     "static/media/login_bg.png": "/jcchallenge/static/media/login_bg.6a9894500d24d9b79850.png",
     "static/media/person_1.png": "/jcchallenge/static/media/person_1.c4b942288b64488c3da0.png",
@@ -17,13 +17,14 @@
     "static/media/img_8.png": "/jcchallenge/static/media/img_8.dedd079ee9bcc4c46fcc.png",
     "static/media/footer_floating_bg.png": "/jcchallenge/static/media/footer_floating_bg.e43aad3972c88090ef72.png",
     "static/media/img_17.png": "/jcchallenge/static/media/img_17.f3dc1328597fa4a26e28.png",
+    "static/media/login_bg_gray.png": "/jcchallenge/static/media/login_bg_gray.1472fee1a268ea35b7f9.png",
     "static/media/footer_dots.png": "/jcchallenge/static/media/footer_dots.1dea23be108f9b2a3830.png",
     "index.html": "/jcchallenge/index.html",
     "main.40c88f47.css.map": "/jcchallenge/static/css/main.40c88f47.css.map",
-    "main.c604b619.js.map": "/jcchallenge/static/js/main.c604b619.js.map"
+    "main.4fda8c5a.js.map": "/jcchallenge/static/js/main.4fda8c5a.js.map"
   },
   "entrypoints": [
     "static/css/main.40c88f47.css",
-    "static/js/main.c604b619.js"
+    "static/js/main.4fda8c5a.js"
   ]
 }
