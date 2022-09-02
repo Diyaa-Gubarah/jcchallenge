@@ -1,5 +1,3 @@
-import { device, size } from "../../constant/devices";
-
 import React from "react";
 import styled from "styled-components";
 
