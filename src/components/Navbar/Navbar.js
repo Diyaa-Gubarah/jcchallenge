@@ -7,6 +7,7 @@ import React from "react";
 import Sidenav from "../SideNav/Sidenav";
 import styled from "styled-components";
 import { useAppShallowSelector } from "../../hooks/hooks";
+import { useNavigate } from "react-router-dom";
 
 const CircleWrapper = styled.div`
   display: flex;
@@ -46,7 +47,9 @@ const ButtonContainer = styled(Container)`
   }
 `;
 
+
 const Navbar = () => {
+  const navigate = useNavigate();
   const user = useAppShallowSelector(({ auth }) => auth.data);
   const sideRef = React.useRef();
 
@@ -64,6 +67,8 @@ const Navbar = () => {
         alt="Logo"
         margin="0"
         width="auto"
+        onClick={() => navigate("/")}
+        style={{ cursor: "pointer" }}
       />
       <Container
         horizontal
