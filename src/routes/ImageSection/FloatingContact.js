@@ -1,6 +1,5 @@
 import CustomButton from "../../components/CustomButtom/CustomButton";
 import CustomTextWithLine from "../../components/CustomTextWithLine/CustomTextWithLine";
-import EmptySpan from "../../components/EmptySpan/EmptySpan";
 import ImageWrapper from "../../components/ImageWrapper/ImageWrapper";
 import styled from "styled-components";
 

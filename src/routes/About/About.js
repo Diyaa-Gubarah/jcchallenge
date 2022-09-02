@@ -1,12 +1,10 @@
-import { device, size } from "../../constant/devices";
-
 import CardDetail from "../../components/CardDetail/CardDetail";
 import Container from "../../components/Container/Container";
 import CustomText from "../../components/CustomText/CustomText";
 import CustomTextWithLine from "../../components/CustomTextWithLine/CustomTextWithLine";
-import EmptySpan from "../../components/EmptySpan/EmptySpan";
 import ImageWrapper from "../../components/ImageWrapper/ImageWrapper";
 import { SECTION_TOW } from "../../data/info";
+import { size } from "../../constant/devices";
 import styled from "styled-components";
 
 const AboutImage = styled(ImageWrapper)`

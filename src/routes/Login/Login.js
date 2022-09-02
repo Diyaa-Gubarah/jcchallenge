@@ -1,17 +1,15 @@
 import {
   useAppDispatch,
   useAppShallowSelector,
-  useForm,
+  useForm
 } from "../../hooks/hooks";
 
 import Brand from "../../components/CustomImage/CustomImage";
 import Container from "../../components/Container/Container";
 import CustomText from "../../components/CustomText/CustomText";
-import ImageWrapper from "../../components/ImageWrapper/ImageWrapper";
 import Input from "../../components/Input/Input";
 import { Link } from "react-router-dom";
 import { loginAUser } from "../../store/slice/userSlice";
-import { size } from "../../constant/devices";
 import styled from "styled-components";
 
 const Form = styled.form`

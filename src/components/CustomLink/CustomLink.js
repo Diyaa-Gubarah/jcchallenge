@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation, useResolvedPath } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 import React from "react";

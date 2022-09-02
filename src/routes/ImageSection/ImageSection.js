@@ -1,6 +1,5 @@
 import Brand from "../../components/CustomImage/CustomImage";
 import Container from "../../components/Container/Container";
-import CustomButton from "../../components/CustomButtom/CustomButton";
 import CustomText from "../../components/CustomText/CustomText";
 import CustomTextWithLine from "../../components/CustomTextWithLine/CustomTextWithLine";
 import EmptySpan from "../../components/EmptySpan/EmptySpan";

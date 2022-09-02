@@ -3,11 +3,9 @@ import { MdOutlineClose, MdOutlineLogout } from "react-icons/md";
 import Container from "../Container/Container";
 import CustomLink from "../CustomLink/CustomLink";
 import CustomText from "../CustomText/CustomText";
-import ListItem from "../ListItem/ListItem";
 import React from "react";
 import { logout } from "../../store/slice/userSlice";
 import styled from "styled-components";
-import { trusted } from "mongoose";
 import { useAppDispatch } from "../../hooks/hooks";
 
 const FixedContainer = styled.div`

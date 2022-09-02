@@ -4,7 +4,6 @@ import Brand from "../../components/CustomImage/CustomImage";
 import Container from "../../components/Container/Container";
 import CustomButton from "../../components/CustomButtom/CustomButton";
 import CustomText from "../../components/CustomText/CustomText";
-import EmptySpan from "../../components/EmptySpan/EmptySpan";
 import { FiYoutube } from "react-icons/fi";
 import ImageWrapper from "../../components/ImageWrapper/ImageWrapper";
 import { size } from "../../constant/devices";

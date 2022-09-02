@@ -1,6 +1,5 @@
 import Container from "../../components/Container/Container";
 import CustomTextWithLine from "../../components/CustomTextWithLine/CustomTextWithLine";
-import EmptySpan from "../../components/EmptySpan/EmptySpan";
 import SectionItem from "../../components/SectionItem/SectionItem";
 
 const Services = () => {

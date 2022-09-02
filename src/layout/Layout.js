@@ -1,6 +1,5 @@
 import { useAppDispatch, useAppShallowSelector } from "../hooks/hooks";
 
-import Footer from "../components/Footer/Footer";
 import Login from "../routes/Login/Login";
 import { Main } from "../routes/Main/Main";
 import Navbar from "../components/Navbar/Navbar";
@@ -25,7 +24,7 @@ const Layout = ({ children }) => {
 
   React.useEffect(() => {
     dispatch(initializeUser());
-  }, []);
+  }, [dispatch]);
 
   return <App children={children} />;
 };
