@@ -90,7 +90,7 @@ const Footer = () => {
           fz={"1.3em"}
           lh="22px"
           color={"rgba(21, 30, 44, 0.5)"}
-          width="fit-content"
+          ta='center'
         >
           © 2022 Proj X - All Rights Reserved
         </CustomText>

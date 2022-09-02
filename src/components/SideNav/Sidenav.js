@@ -7,6 +7,7 @@ import React from "react";
 import { logout } from "../../store/slice/userSlice";
 import styled from "styled-components";
 import { useAppDispatch } from "../../hooks/hooks";
+import { useNavigate } from "react-router-dom";
 
 const FixedContainer = styled.div`
   position: fixed;
@@ -65,11 +66,13 @@ const Button = styled(Container)`
 `;
 
 const App = React.forwardRef((props, ref) => {
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const [show, setShow] = React.useState(false);
 
   const signOut = React.useCallback(() => {
     dispatch(logout());
+    navigate("/jcchallenge");
   }, [dispatch]);
 
   const open = React.useCallback(() => {

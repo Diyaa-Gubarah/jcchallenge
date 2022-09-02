@@ -1,15 +1,17 @@
-import { Link, useNavigate } from "react-router-dom";
 import {
   useAppDispatch,
   useAppShallowSelector,
   useForm,
 } from "../../hooks/hooks";
 
+import { AiOutlineEye } from "react-icons/ai";
 import Brand from "../../components/CustomImage/CustomImage";
 import Container from "../../components/Container/Container";
 import CustomText from "../../components/CustomText/CustomText";
 import ImageWrapper from "../../components/ImageWrapper/ImageWrapper";
 import Input from "../../components/Input/Input";
+import { Link } from "react-router-dom";
+import React from "react";
 import { loginAUser } from "../../store/slice/userSlice";
 import styled from "styled-components";
 
@@ -86,6 +88,8 @@ const Login = () => {
   const isLoading = useAppShallowSelector(({ auth }) => auth.isLoading);
   const message = useAppShallowSelector(({ auth }) => auth.message);
 
+  const [show, setShow] = React.useState(false);
+
   const email = useForm("email");
   const password = useForm("password");
 
@@ -151,7 +155,23 @@ const Login = () => {
               >
                 Password
               </CustomText>
-              <Input {...password} placeholder="Password" />
+              <Input
+                {...password}
+                placeholder="Password"
+                type={show ? "text" : "password"}
+              />
+              <AiOutlineEye
+                size="2em"
+                color={show ? "#CF0303" : "#171717"}
+                style={{
+                  position: "absolute",
+                  top: "38%",
+                  right: "1%",
+                  padding: "0.25em",
+                }}
+                onClick={() =>setShow(!show)}
+              />
+
               <Link to="/forget_password" style={{ textAlign: "right" }}>
                 <UnderLineText
                   fw={"500"}
