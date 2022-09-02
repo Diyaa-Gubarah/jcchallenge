@@ -1,3 +1,4 @@
+import { Link, useNavigate } from "react-router-dom";
 import {
   useAppDispatch,
   useAppShallowSelector,
@@ -9,7 +10,6 @@ import Container from "../../components/Container/Container";
 import CustomText from "../../components/CustomText/CustomText";
 import ImageWrapper from "../../components/ImageWrapper/ImageWrapper";
 import Input from "../../components/Input/Input";
-import { Link } from "react-router-dom";
 import { loginAUser } from "../../store/slice/userSlice";
 import styled from "styled-components";
 
@@ -84,6 +84,7 @@ const ContainerWithBoarder = styled(Container)`
 
 
 const Login = () => {
+  const navigate = useNavigate()
   const dispatch = useAppDispatch();
   const isLoading = useAppShallowSelector(({ auth }) => auth.isLoading);
   const message = useAppShallowSelector(({ auth }) => auth.message);
@@ -96,6 +97,8 @@ const Login = () => {
 
     //dispatch login action
     dispatch(loginAUser({ email: email.value, password: password.value }));
+
+    navigate('/')
   };
 
   return (
