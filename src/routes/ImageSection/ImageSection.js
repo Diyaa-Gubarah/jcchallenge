@@ -17,6 +17,11 @@ const BackgroundImage = styled(Container)`
     width: 65vw;
     @media only screen and (max-width: 800px) {
       width: 85vw;
+      font-size: 0.9em;
+
+      & .personImage {
+        width:50%;
+      }
     }
   }
   & .rightImage {
@@ -80,6 +85,7 @@ const ImageSection = () => {
             alt="brand"
             width="30%"
             height={"30%"}
+            className='personImage'
           />
 
           <CustomText

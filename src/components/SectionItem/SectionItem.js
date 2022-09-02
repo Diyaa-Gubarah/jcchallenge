@@ -13,6 +13,12 @@ const ResponsiveContainer = styled(Container)`
     text-align: center;
     width: 100%;
   }
+
+  @media only screen and (max-width: 400px) {
+    & .btnContainer * {
+      font-size: 0.8em;
+    }
+  }
 `;
 
 function SectionItem({ background, swap = null, color }) {

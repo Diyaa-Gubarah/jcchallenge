@@ -15,8 +15,9 @@ const LandingLeft = styled(Container)`
   gap: 1em;
   padding: 0 1.5em 0 0;
 
-  @media only screen and (max-width: ${size.mobileL}) {
-    text-align: left;
+  @media only screen and (max-width: 480px) {
+    align-items: center;
+    text-align: center;
     gap: 0.75em;
   }
   @media only screen and (min-width: 860px) and (max-width: ${size.desktop}) {
@@ -43,7 +44,6 @@ const FixedContainer = styled.div`
 const LandingPage = () => {
   return (
     <Container horizontal gap="2em" align="center" justify="center" wrap="wrap">
-
       <FixedContainer>
         <Brand
           src={require("../../assets/images/v_line.png")}
