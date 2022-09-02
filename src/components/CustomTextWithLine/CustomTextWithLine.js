@@ -1,6 +1,7 @@
 import Brand from "../CustomImage/CustomImage";
 import Container from "../Container/Container";
 import CustomText from "../CustomText/CustomText";
+import React from "react";
 
 function CustomTextWithLine({
   left = null,
@@ -31,4 +32,4 @@ function CustomTextWithLine({
   );
 }
 
-export default CustomTextWithLine;
+export default React.memo(CustomTextWithLine);

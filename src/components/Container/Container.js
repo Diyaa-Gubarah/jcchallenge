@@ -1,5 +1,6 @@
 import { device, size } from "../../constant/devices";
 
+import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -28,4 +29,4 @@ const Container = styled.div`
   height: ${(props) => props.height};
 `;
 
-export default Container;
+export default React.memo(Container);

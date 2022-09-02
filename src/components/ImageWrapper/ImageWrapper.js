@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 const ImageWrapper = styled.div`
@@ -25,4 +26,4 @@ const ImageWrapper = styled.div`
   border-bottom-right-radius: ${(props) => props.bbr || "15px"};
 `;
 
-export default ImageWrapper;
+export default React.memo(ImageWrapper);

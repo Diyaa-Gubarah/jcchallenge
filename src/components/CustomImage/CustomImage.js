@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 const Brand = styled.img`
@@ -7,4 +8,4 @@ const Brand = styled.img`
   margin: ${(props) => props.margin || "1em"};
 `;
 
-export default Brand;
+export default React.memo(Brand);

@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 const CustomText = styled.span`
@@ -11,4 +12,4 @@ const CustomText = styled.span`
   text-align: ${(props) => props.ta};
 `;
 
-export default CustomText;
+export default React.memo(CustomText);

@@ -1,7 +1,7 @@
-import { useLocation } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 // custom hook to get the current pathname in React
 
@@ -36,7 +36,7 @@ const CustomLink = ({ to = "", children }) => {
   );
 };
 
-export default CustomLink;
+export default React.memo(CustomLink);
 
 /*<Link
       to={to}
