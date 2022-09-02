@@ -1,12 +1,13 @@
 import {
   useAppDispatch,
   useAppShallowSelector,
-  useForm
+  useForm,
 } from "../../hooks/hooks";
 
 import Brand from "../../components/CustomImage/CustomImage";
 import Container from "../../components/Container/Container";
 import CustomText from "../../components/CustomText/CustomText";
+import ImageWrapper from "../../components/ImageWrapper/ImageWrapper";
 import Input from "../../components/Input/Input";
 import { Link } from "react-router-dom";
 import { loginAUser } from "../../store/slice/userSlice";
@@ -51,23 +52,23 @@ const LoginContainer = styled(Container)`
   }
   @media only screen and (${`max-width:780px`}) {
     flex-direction: column-reverse;
-
     height: auto;
-
     & .left {
       margin: 0;
       width: 80%;
       gap: 2em;
       padding: 2em 0;
-
       & .loginHeader {
         text-align: center;
       }
     }
-
     & .right {
       margin: 0;
       width: 100%;
+    }
+    & .stickBg {
+      width: 100%;
+      top: 0;
     }
   }
 `;
@@ -82,7 +83,6 @@ const ContainerWithBoarder = styled(Container)`
 const Login = () => {
   const dispatch = useAppDispatch();
   const isLoading = useAppShallowSelector(({ auth }) => auth.isLoading);
-  const success = useAppShallowSelector(({ auth }) => auth.success);
   const message = useAppShallowSelector(({ auth }) => auth.message);
 
   const email = useForm("email");
@@ -96,12 +96,21 @@ const Login = () => {
   };
 
   return (
-    <LoginContainer horizontal height="100vh" align="center">
-      <Container
-        className="left"
-        justify="space-between"
-        padding="2em"
-      >
+    <LoginContainer horizontal align="center" padding="0">
+      <ImageWrapper
+        position="absolute"
+        right="0"
+        top="0"
+        background={require("../../assets/images/login_bg_gray.png")}
+        height="100%"
+        width="50%"
+        btr="0"
+        btl="0"
+        bbr="0"
+        bbl="0"
+        className="stickBg"
+      />
+      <Container className="left" justify="space-between" padding="2em">
         <Brand
           src={require("../../assets/images/brand.png")}
           alt="Logo"
@@ -155,7 +164,7 @@ const Login = () => {
             </Container>
 
             <ErrorText>{message}</ErrorText>
-            <Button type="submit">Login</Button>
+            <Button type="submit">{isLoading ? "Process..." : "Login"}</Button>
           </Container>
           <Container horizontal align="center" gap="0.5em">
             <CustomText fw={"500"} fz={"0.9em"} color={"#060C3C"} ta="center">
@@ -190,42 +199,37 @@ const Login = () => {
           </Link>
         </ContainerWithBoarder>
       </Container>
-      <Container
-        justify="center"
-        align="center"
-        className="right"
-        height="100%"
-        bgc="#F6F6F6"
-        padding="1em"
-      >
-        <Brand
-          margin="0"
-          width="500px"
-          height="250px"
-          src={require("../../assets/images/login_bg.png")}
-        />
+      <Container className="right" padding="2em">
+        <Container justify="center" align="center" height="100%">
+          <Brand
+            width="85%"
+            height={"auto"}
+            margin="0"
+            src={require("../../assets/images/login_bg.png")}
+          />
 
-        <Container margin="2em auto" align="center" gap="1em">
-          <CustomText
-            fw={"600"}
-            fz={"1em"}
-            lh={"30px"}
-            color={"#141E2C"}
-            ta="center"
-          >
-            Enter the Network and start growing your Business!
-          </CustomText>
-          <CustomText
-            fw={"500"}
-            fz={"0.8em"}
-            lh={"23px"}
-            color={"#141E2C"}
-            ta="center"
-          >
-            Profit Paradise is the first Network that gives you all the
-            necessary to promote and sell products and services taking advantage
-            of Performance Marketing.
-          </CustomText>
+          <Container margin="2em auto" align="center" gap="1em">
+            <CustomText
+              fw={"600"}
+              fz={"1em"}
+              lh={"30px"}
+              color={"#141E2C"}
+              ta="center"
+            >
+              Enter the Network and start growing your Business!
+            </CustomText>
+            <CustomText
+              fw={"500"}
+              fz={"0.8em"}
+              lh={"23px"}
+              color={"#141E2C"}
+              ta="center"
+            >
+              Profit Paradise is the first Network that gives you all the
+              necessary to promote and sell products and services taking
+              advantage of Performance Marketing.
+            </CustomText>
+          </Container>
         </Container>
       </Container>
     </LoginContainer>
