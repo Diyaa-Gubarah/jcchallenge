@@ -9,9 +9,16 @@ import { initializeUser } from "../store/slice/userSlice";
 const App = ({ children }) => {
   const user = useAppShallowSelector(({ auth }) => auth.data);
 
-  return !user ? (
-    <Login />
-  ) : (
+  // return !user ? (
+  //   <Login />
+  // ) : (
+  //   <>
+  //     <Navbar />
+  //     <Main>{children}</Main>
+  //   </>
+  // );
+
+  return (
     <>
       <Navbar />
       <Main>{children}</Main>
